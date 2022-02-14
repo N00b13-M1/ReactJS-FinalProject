@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        Hello
+        Bonjour Isma comment vas-tu ?
       </div>
     );
   }
