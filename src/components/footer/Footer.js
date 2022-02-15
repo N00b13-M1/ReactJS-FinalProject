@@ -4,40 +4,41 @@ import './footer.sass'
 export default function Footer() {
     return (
         <>
-            <footer className="container-fluid">
-                <div className="row row1">
-                    <div className="col-lg-4 col-md-4 col-10">
-                        <h6>GET IN TOUCH</h6>
-                        <p className="copyright text-center">Any questions?Let us know in store at 8th floor, 379 Hudson st. New York, NY 10018 or call us on</p>
-                        <ul className="d-flex justify-content-center p-0">
-                            <li className=""><i class="fa-brands fa-facebook-f"></i></li>
-                            <li className=""><i class="fa-brands fa-instagram"></i></li>
-                            <li className=""><i class="fa-brands fa-pinterest-p"></i></li>
-                            <li className=""><i class="fa-brands fa-snapchat"></i></li>
-                            <li className=""><i class="fa-brands fa-youtube"></i></li>
+            <footer className="">
+                <div className="container">
+                <div className="row row1 d-flex justify-content-between mx-lg-5 mx-md-5 my-5">
+                    <div className="col-lg-5 col-md-5 col-10 px-md-5 px-lg-5 mx-auto">
+                        <h6 className="text-center mt-5">GET IN TOUCH</h6>
+                        <p className="copyright text-center my-4">Any questions?Let us know in store at 8th floor, 379 Hudson st. New York, NY 10018 or call us on (+1) 96 716 6879</p>
+                        <ul className="list1 d-flex justify-content-center p-0">
+                            <li className="mx-2 my-2"><a href="http://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li className="mx-2 my-2"><a href="http://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li className="mx-2 my-2"><a href="http://www.pinterest.com"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            <li className="mx-2 my-2"><a href="http://www.snapchat.com"><i class="fa-brands fa-snapchat"></i></a></li>
+                            <li className="mx-2 my-2"><a href="http://www.youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
                         </ul>
                     </div>
-                    <div className="col-lg-4 col-md-4 col-10">
-                        <h6>LINKS</h6>
+                    <div className="list2 col-lg-3 col-md-3 col-7 px-md-0 px-5 px-lg-5 mx-auto">
+                        <h6 className="mb-4 mt-5">LINKS</h6>
                         <ul className="p-0">
-                            <li className="">Search</li>
-                            <li className="">About Us</li>
-                            <li className="">Contact Us</li>
-                            <li className="">Returns</li>
+                            <li className="mb-2"><a href="###">Search</a></li>
+                            <li className="my-2"><a href="###">About Us</a></li>
+                            <li className="my-2"><a href="###">Contact Us</a></li>
+                            <li className="my-2"><a href="###">Returns</a></li>
                         </ul>
                     </div>
-                    <div className="col-lg-4 col-md-4 col-10">
-                        <h6>LINKS</h6>
+                    <div className="list3 col-lg-3 col-md-3 col-7 px-md-0 px-5 px-lg-5 mx-auto">
+                        <h6 className="mb-4 mt-5">LINKS</h6>
                         <ul className="p-0">
-                            <li className="">Search</li>
-                            <li className="">About Us</li>
-                            <li className="">Contact Us</li>
-                            <li className="">Returns</li>
+                            <li className="mb-2"><a href="###">Search</a></li>
+                            <li className="my-2"><a href="###">About Us</a></li>
+                            <li className="my-2"><a href="###">Contact Us</a></li>
+                            <li className="my-2"><a href="###">Returns</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="row row2 justify-content-center align-items-center mx-aut my-3">
-                    <div className="col-4">
+                    <div className="col-lg-4 col-md-4 col-10">
                         <ul className="d-flex justify-content-center p-0">
                             <li className=""><img src="./img/paypal.webp" alt="paypal logo" /></li>
                             <li className=""><img src="./img/visa.webp" alt="visa logo" /></li>
@@ -47,6 +48,7 @@ export default function Footer() {
                         </ul>
                         <p className="copyright text-center">Copyright © All rights reserved</p>
                     </div>
+                </div>
                 </div>
             </footer>
 
