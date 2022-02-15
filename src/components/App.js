@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './App.css'
+import './app.sass';
+import Header from "./header/Header.js";
 
 class App extends Component {
   render() {
     return (
-      <div className="text-center text-white">
-        Bonjour Isma comment vas-tu ?
+      <div>
+        <Header/>
       </div>
     );
   }
