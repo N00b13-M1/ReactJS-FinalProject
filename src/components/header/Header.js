@@ -13,35 +13,39 @@ function Header() {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Product</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">About</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <ul className="d-flex">
-                        <li className="nav-item">
-                            <a className="nav-link" href="#"><img src="./img/icon-header-01.png.webp" alt="basket" /></a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#"><img src="./img/icon-header-02.png.webp" alt="basket" /></a>
-                        </li>
-                    </ul>
+                <div className="collapse navbar-collapse row" id="navbarSupportedContent">
+                    <div className="row">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 col-11 justify-content-center align-items-center">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Product</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">About</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <ul className="d-flex p-0 col-1">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><img src="./img/icon-header-01.png.webp" alt="basket" /></a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#"><img src="./img/icon-header-02.png.webp" alt="basket" /></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 </div>
             </nav>
             {/* Header - Carousel */}
-            <div className="title">
-                <h1></h1>
+            <div className="title text-center">
+                <p>Women Collection 2022</p>
+                <h1>NEW ARRIVALS</h1>
+                <button className="shop-now mt-3">SHOP NOW</button>
             </div>
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
