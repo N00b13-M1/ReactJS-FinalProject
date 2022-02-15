@@ -11,11 +11,11 @@ export default function Footer() {
                         <h6 className="text-center mt-5">GET IN TOUCH</h6>
                         <p className="copyright text-center my-4">Any questions?Let us know in store at 8th floor, 379 Hudson st. New York, NY 10018 or call us on (+1) 96 716 6879</p>
                         <ul className="list1 d-flex justify-content-center p-0">
-                            <li className="mx-2 my-2"><a href="http://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li className="mx-2 my-2"><a href="http://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li className="mx-2 my-2"><a href="http://www.pinterest.com"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                            <li className="mx-2 my-2"><a href="http://www.snapchat.com"><i class="fa-brands fa-snapchat"></i></a></li>
-                            <li className="mx-2 my-2"><a href="http://www.youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li className="mx-2 my-2"><a href="http://www.facebook.com"><i className="fa-brands fa-facebook-f"></i></a></li>
+                            <li className="mx-2 my-2"><a href="http://www.instagram.com"><i className="fa-brands fa-instagram"></i></a></li>
+                            <li className="mx-2 my-2"><a href="http://www.pinterest.com"><i className="fa-brands fa-pinterest-p"></i></a></li>
+                            <li className="mx-2 my-2"><a href="http://www.snapchat.com"><i className="fa-brands fa-snapchat"></i></a></li>
+                            <li className="mx-2 my-2"><a href="http://www.youtube.com"><i className="fa-brands fa-youtube"></i></a></li>
                         </ul>
                     </div>
                     <div className="list2 col-lg-3 col-md-3 col-7 px-md-0 px-5 px-lg-5 mx-auto">
