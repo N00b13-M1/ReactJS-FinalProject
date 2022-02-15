@@ -1,10 +1,12 @@
 import React from "react";
 
-function ProductItem(id, thename, cover) {
-    <div key={id}>
-        <img src={cover} />
+
+function ProductItem(id, thename, cover, price) {
+    <li key={id}>
+        <img className="product-item-cover" src={cover} />
         <p>{thename}</p>
-    </div>
+        <p>{price}</p>
+    </li>
 }
 
 export default ProductItem;

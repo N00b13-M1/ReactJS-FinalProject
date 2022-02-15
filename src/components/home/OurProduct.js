@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductItem from '../product-item/ProductItem';
 import './ourproduct.sass';
 
 
@@ -31,7 +32,7 @@ function OurProduct() {
                 </ul>
             </div>
             <ul>
-                <li>map product vient ici. </li>
+                <li>///// .MAP PRODUCT VIENT ICI ///// </li>
             </ul>
             {/* LookBook Banner */}
         </div>
