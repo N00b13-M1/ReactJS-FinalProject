@@ -3,6 +3,7 @@ import './ourproduct.sass';
 
 
 function OurProduct() {  
+
     return (
         <div className='container py-5'>
             {/* Coming Soon Images */}
@@ -35,28 +36,9 @@ function OurProduct() {
                     </li>
                 </ul>
             </div>
-            <div className="row col-12 justify-content-evenly mx-0">
-                <div className=''>
-                    <div className=''>
-                        <img src={backpackGrey} />
-                    </div>
-                </div>
-                <div className=''>
-                    <div className=''>
-                        
-                    </div>
-                </div>
-                <div className=''>
-                    <div className=''>
-                        
-                    </div>
-                </div>
-                <div className=''>
-                    <div className=''>
-                        
-                    </div>
-                </div>
-            </div>
+            <ul>
+                <li>map product comes here</li>
+            </ul>
         </div>
     )
 }

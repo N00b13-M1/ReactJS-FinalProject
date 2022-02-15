@@ -1,8 +1,9 @@
 import React from "react";
 
-function ProductItem(id, name, category, price, cover) {
+function ProductItem(id, thename, cover) {
     <div key={id}>
         <img src={cover} />
+        <p>{thename}</p>
     </div>
 }
 
