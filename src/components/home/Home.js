@@ -1,6 +1,7 @@
 import React from 'react';
 import './home.sass';
-import Header from "../header/Header.js";
+import Navigation from "../navigation/Navigation.js"
+import HeroBanner from "../hero-banner/HeroBanner.js";
 import Footer from "../footer/Footer.js";
 import OurProduct from "../home/OurProduct.js";
 
@@ -8,7 +9,8 @@ import OurProduct from "../home/OurProduct.js";
 function Home() {  
     return (
         <div>
-            <Header />
+            <Navigation />
+            <HeroBanner/>
             <OurProduct />
             <Footer />
         </div>
