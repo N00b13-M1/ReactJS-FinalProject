@@ -1,3 +1,5 @@
+import backpackGrey from "./img/item-01.jpg.webp"
+
 export const itemList = [
     {
         id: 0,
@@ -6,6 +8,7 @@ export const itemList = [
         bestseller: true,
         sale: false,
         price: "$115.00",
+        cover: backpackGrey
     },
     {
         id: 1,

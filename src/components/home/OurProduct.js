@@ -26,6 +26,36 @@ function OurProduct() {
             {/* Our Products Section */}
             <div>
                 <h2 className='text-center'>OUR PRODUCTS</h2>
+                <ul className='d-flex justify-content-center p-0'>
+                    <li>
+                        <p>Best-Seller</p>
+                    </li>
+                    <li>
+                        <p>Sale</p>
+                    </li>
+                </ul>
+            </div>
+            <div className="row col-12 justify-content-evenly mx-0">
+                <div className=''>
+                    <div className=''>
+                        <img src={backpackGrey} />
+                    </div>
+                </div>
+                <div className=''>
+                    <div className=''>
+                        
+                    </div>
+                </div>
+                <div className=''>
+                    <div className=''>
+                        
+                    </div>
+                </div>
+                <div className=''>
+                    <div className=''>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -43,7 +43,7 @@ function Header() {
             </nav>
             {/* Header - Carousel */}
             <div className="title text-center">
-                <p>Women Collection 2022</p>
+                <h2>Women Collection 2022</h2>
                 <h1>NEW ARRIVALS</h1>
                 <button className="shop-now mt-3">SHOP NOW</button>
             </div>
