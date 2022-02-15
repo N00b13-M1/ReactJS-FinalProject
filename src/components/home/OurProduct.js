@@ -4,6 +4,7 @@ import './ourproduct.sass';
 
 function OurProduct() {  
     return (
+        <>
         <div className='container py-5'>
             {/* Coming Soon Images */}
             <div className="row col-12 justify-content-evenly mx-0">
@@ -19,7 +20,7 @@ function OurProduct() {
             </div>
             {/* Our Products Section */}
             <div>
-                <h2 className='text-center'>OUR PRODUCTS</h2>
+                <h3 className='text-center'>OUR PRODUCTS</h3>
                 <ul className='d-flex justify-content-center p-0'>
                     <li>
                         <a className='filter'>Best-Seller</a>
@@ -33,10 +34,12 @@ function OurProduct() {
                 <li>map product vient ici. </li>
             </ul>
             {/* LookBook Banner */}
-            <div>
-
-            </div>
         </div>
+        <div className='container-fluid lookbook text-center'>
+                <h5><span>The Beauty</span><br /> LOOKBOOK</h5>
+                <p><i className="fa-solid fa-play" /> Play Video</p>
+        </div>
+        </>
     )
 }
 

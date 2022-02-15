@@ -6,7 +6,7 @@ export default function Footer() {
         <>
             <footer className="">
                 <div className="container">
-                <div className="row row1 d-flex justify-content-between mx-lg-5 mx-md-5 my-5">
+                <div className="row row1 d-flex justify-content-between mx-lg-5 mx-md-5 mb-5">
                     <div className="col-lg-5 col-md-5 col-10 px-md-5 px-lg-5 mx-auto">
                         <h6 className="text-center mt-5">GET IN TOUCH</h6>
                         <p className="copyright text-center my-4">Any questions?Let us know in store at 8th floor, 379 Hudson st. New York, NY 10018 or call us on (+1) 96 716 6879</p>
@@ -37,7 +37,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="row row2 justify-content-center align-items-center mx-aut my-3">
+                <div className="row row2 justify-content-center align-items-center mx-aut mt-3">
                     <div className="col-lg-4 col-md-4 col-10">
                         <ul className="d-flex justify-content-center p-0">
                             <li className=""><img src="./img/paypal.webp" alt="paypal logo" /></li>
