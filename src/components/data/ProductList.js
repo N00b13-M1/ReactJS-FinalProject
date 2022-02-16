@@ -15,6 +15,8 @@ export const itemList = [
         category: "Men",
         bestseller: true,
         sale: false,
+        new: false,
+        old: true,
         price: "$115.00",
         cover: backpackGrey
     },
@@ -24,6 +26,8 @@ export const itemList = [
         category: "Accessories",
         bestseller: false,
         sale: false,
+        new: false,
+        old: true,
         price: "$125.00",
         cover: backpackBlack
     },
@@ -33,6 +37,8 @@ export const itemList = [
         category: "Women",
         bestseller: true,
         sale: false,
+        new: false,
+        old: true,
         price: "$80.00",
         cover: denimJacket
     },
@@ -42,6 +48,8 @@ export const itemList = [
         category: "Women",
         bestseller: false,
         sale: true,
+        new: false,
+        old: true,
         price: "$85.00",
         cover: whiteSneakers
     },
@@ -51,6 +59,8 @@ export const itemList = [
         category: "Women",
         bestseller: false,
         sale: false,
+        new: true,
+        old: false,
         price: "$50.00",
         cover: denimShorts
     },
@@ -60,6 +70,8 @@ export const itemList = [
         category: "Kids",
         bestseller: false,
         sale: true,
+        new: true,
+        old: false,
         price: "$95.00",
         cover: watch
     },
@@ -69,6 +81,8 @@ export const itemList = [
         category: "Women",
         bestseller: true,
         sale: false,
+        new: true,
+        old: false,
         price: "$65.00",
         cover: denimTrousers
     },
@@ -78,6 +92,8 @@ export const itemList = [
         category: "Kids",
         bestseller: false,
         sale: true,
+        new: true,
+        old: false,
         price: "$45.00",
         cover: tshirt
     },
@@ -87,6 +103,8 @@ export const itemList = [
         category: "Men",
         bestseller: true,
         sale: true,
+        new: true,
+        old: false,
         price: "$75.00",
         cover: blackSneakers
     }
