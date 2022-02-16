@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navigation.sass";
-import {Link} from "react-router-dom"
 
 
 export default function Navigation() {
-    
     return (
         <div>
             {/* NavBar */}
@@ -17,7 +15,6 @@ export default function Navigation() {
                 </button>
                 <div className="collapse navbar-collapse row" id="navbarSupportedContent">
                     <div className="row">
-<<<<<<< HEAD
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 col-11 justify-content-center align-items-center">
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/">Home</Link>
@@ -38,28 +35,6 @@ export default function Navigation() {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="###"><img src="./img/icon-header-02.png.webp" alt="basket" /></a>
-=======
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 col-11 justify-content-center align-items-center">
-                            <li className="nav-item">
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/product">Product</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/contact">Contact</Link>
-                            </li>
-                        </ul>
-                        <ul className="d-flex p-0 col-1">
-                            <li className="nav-item">
-                                <Link to="/panier"><img src="./img/icon-header-01.png.webp" alt="basket" /></Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/coeur"><img src="./img/icon-header-02.png.webp" alt="basket" /></Link>
->>>>>>> 65880b63cbfc62509e0cc7a4e856eb149c53dc40
                             </li>
                         </ul>
                     </div>

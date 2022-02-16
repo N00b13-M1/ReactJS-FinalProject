@@ -2,7 +2,7 @@ import React from 'react';
 import './coeur.sass';
 
 
-function Coeur() {  
+export default function Coeur() {  
     return (
         <div className='text-center bg-danger'>
             <h1>Favorite - Coeur</h1>
@@ -10,4 +10,3 @@ function Coeur() {
     )
 }
 
-export default Coeur;
