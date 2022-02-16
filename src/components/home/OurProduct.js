@@ -33,11 +33,7 @@ export default function OurProduct() {
                 </ul>
             </div>
             <div>
-                    {itemList.map((element) =>
-                        <ProductItem 
-                            key = {element.id}
-                        />
-                    )}
+            
             </div>
             {/* LookBook Banner */}
         </div>
