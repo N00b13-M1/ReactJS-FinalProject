@@ -2,10 +2,9 @@ import React from 'react';
 import './home.sass';
 import HeroBanner from "../hero-banner/HeroBanner.js";
 import OurProduct from "../home/OurProduct.js";
-import OurStory from '../about/OurStory.js';
 import Banner from '../banner/Banner.js'
 
-function Home() {
+export default function Home() {
     
     const array = {
         titles: [
@@ -18,7 +17,6 @@ function Home() {
         <div>
             <HeroBanner/>
             <OurProduct />
-            <OurStory/>
             {
                 array.titles.map((element,index) => {
                     return(
@@ -29,7 +27,5 @@ function Home() {
         </div>
     )
 }
-
-export default Home;
 
 

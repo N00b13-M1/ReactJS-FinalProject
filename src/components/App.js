@@ -1,19 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './app.sass';
-import Home from "./home/Home.js";
-import Footer from "./footer/Footer.js";
-import Navigation from "./navigation/Navigation.js"
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Navigation from './navigation/Navigation'
+import Home from './home/Home.js';
+import Product from './products/Product';
+import About from './about/About'
+import Contact from './contact/Contact';
+import Footer from './footer/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-
-function App() {  
+export default function App() {  
   return (
-      <div>
-        <Navigation/>
-        <Home />
-        <Footer />
-      </div>
+      // <Router>
+      <BrowserRouter>
+          <Navigation/>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/product" element={<Product/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/contact" element={<Contact/>} />
+          </Routes>
+          {/* <Home /> */}
+          <Footer />
+      </BrowserRouter>
+      // </Router>
   )
 }
 
-export default App;
+
+
+

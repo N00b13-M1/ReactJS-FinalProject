@@ -3,7 +3,7 @@ import ProductItem from '../product-item/ProductItem';
 import './ourproduct.sass';
 
 
-function OurProduct() {  
+export default function OurProduct() {  
     return (
         <>
         <div className='container py-5'>
@@ -43,5 +43,3 @@ function OurProduct() {
         </>
     )
 }
-
-export default OurProduct;

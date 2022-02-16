@@ -1,12 +1,11 @@
 import React from "react";
 
 
-function ProductItem(id, thename, cover, price) {
+export default function ProductItem(id, thename, cover, price) {
     <li key={id}>
-        <img className="product-item-cover" src={cover} />
+        <img className="product-item-cover" src={cover} alt=""/>
         <p>{thename}</p>
         <p>{price}</p>
     </li>
 }
 
-export default ProductItem;
