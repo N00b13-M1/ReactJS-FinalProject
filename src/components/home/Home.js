@@ -23,7 +23,7 @@ function Home() {
             {/* {
                 array.titles.map((element,index) => {
                     return(
-                        <Banner key={index} title={element}/>
+                        <Banner key={index} isma={element}/>
                     )
                 })
             } */}
