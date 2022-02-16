@@ -12,4 +12,3 @@ export default function ProductItem(id, thename, cover, price) {
         </>
     );
 }
-
