@@ -4,8 +4,8 @@ import './coeur.sass';
 
 function Coeur() {  
     return (
-        <div>
-            
+        <div className='text-center bg-danger'>
+            <h1>Favorite - Coeur</h1>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import './app.sass';
 import Navigation from "./navigation/Navigation.js"
 import Home from "./home/Home.js";
-import Product from "./product/Product.js";
+import Product from "./products/Product.js";
 import About from "./about/About.js";
 import Contact from "./contact/Contact.js";
 import Panier from "./panier/Panier.js";

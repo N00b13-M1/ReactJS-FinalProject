@@ -3,11 +3,11 @@ import HeroBanner from "../hero-banner/HeroBanner.js";
 import OurStory from '../about/OurStory.js';
 import "./about.sass";
 
-export default function OurStory() {
+export default function About() {
     
     return (
         <div>
-            <HeroBanner/>
+            {/* Banner */}
             <OurStory />
         </div>
     )

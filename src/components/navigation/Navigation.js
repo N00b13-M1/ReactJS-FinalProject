@@ -18,24 +18,24 @@ function Navigation() {
                     <div className="row">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 col-11 justify-content-center align-items-center">
                             <li className="nav-item">
-                                <a className="nav-link"><Link to="/home">Home</Link></a>
+                                <Link to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link"><Link to="/product">Product</Link></a>
+                                <Link to="/product">Product</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link"><Link to="/about">About</Link></a>
+                                <Link to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link"><Link to="c/contact">Contact</Link></a>
+                                <Link to="/contact">Contact</Link>
                             </li>
                         </ul>
                         <ul className="d-flex p-0 col-1">
                             <li className="nav-item">
-                                <a className="nav-link"><Link to="/panier"><img src="./img/icon-header-01.png.webp" alt="basket" /></Link></a>
+                                <Link to="/panier"><img src="./img/icon-header-01.png.webp" alt="basket" /></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link"><Link to="/coeur"><img src="./img/icon-header-02.png.webp" alt="basket" /></Link></a>
+                                <Link to="/coeur"><img src="./img/icon-header-02.png.webp" alt="basket" /></Link>
                             </li>
                         </ul>
                     </div>

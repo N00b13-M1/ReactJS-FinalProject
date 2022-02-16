@@ -4,8 +4,8 @@ import './panier.sass';
 
 function Panier() {  
     return (
-        <div>
-            
+        <div className='text-center bg-danger'>
+            <h1>Panier</h1>
         </div>
     )
 }
