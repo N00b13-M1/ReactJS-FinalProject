@@ -11,7 +11,7 @@ export default function Home() {
     //     "COUP DE COEUR",
     //     "CONTACT"
     //     ]
-    //}  
+    // }  
     return (
         <div>
             <HeroBanner/>

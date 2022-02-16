@@ -5,7 +5,9 @@ import './product.sass';
 export default function Product() {  
     return (
         <div className='text-center bg-danger'>
-            <h1>Product</h1>
+            <div className="backgroundbanner d-flex justify-content-center align-items-center">
+                <h2 className="text-white fs-1">COUP DE COEUR</h2>
+            </div>
         </div>
     )
 }
