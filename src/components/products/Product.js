@@ -1,9 +1,19 @@
-import React from 'react';
 import './product.sass';
 import ProductList, { itemList } from '../data/ProductList'
+import React, { useState } from 'react';
+
 
 
 export default function Product(props) {  
+
+    const [pageCategory, setPageCategory] = useState('');
+
+    const changepageCategory = (newPageCategory) => {
+        setPageCategory(newPageCategory)
+        console.log(pageCategory);
+    }    
+
+
     return (
         <div className='text-center'>
             <div className="backgroundbanner d-flex justify-content-center align-items-center">
@@ -13,13 +23,13 @@ export default function Product(props) {
                 <div className='row'>
                     {/* Categories */}
                     <div className='col-3'>
-                        <h4 class>Category</h4>
+                        <h4>Category</h4>
                         <ul className=''>
-                            <li>All</li>
-                            <li>Women</li>
-                            <li>Kids</li>
-                            <li>Men</li>
-                            <li>Accessories</li>
+                            <li onClick={() => {changepageCategory('')}}>All</li>
+                            <li onClick={() => {changepageCategory('women')}}>Women</li>
+                            <li onClick={() => {changepageCategory('kids')}}>Kids</li>
+                            <li onClick={() => {changepageCategory('men')}}>Men</li>
+                            <li onClick={() => {changepageCategory('accessories')}}>Accessories</li>
                         </ul>
                         <h4>Filter</h4>
                         <input type="text" placeholder='Search Product' />
@@ -28,7 +38,8 @@ export default function Product(props) {
                     <div className='col-9 row'>
                         <ul className="col-12 row">
                             {
-                                itemList.map((element,index) =>{
+                                itemList.filter(chaqueElementDuTableau => chaqueElementDuTableau.category.toLowerCase().includes(pageCategory))
+                                .map((element,index) =>{
                                     return(
                                         <li className='col-3 mb-3' key={index}>
                                             <img className="product-item-cover col-12" src={element.cover} alt=""/>
