@@ -2,7 +2,7 @@ import React from "react";
 import "./herobanner.sass";
 
 
-function HeroBanner() {
+export default function HeroBanner() {
     
     return (
         <div>
@@ -36,5 +36,3 @@ function HeroBanner() {
         </div>
     )
 }
-
-export default HeroBanner;

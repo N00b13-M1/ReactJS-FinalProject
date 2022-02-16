@@ -3,8 +3,7 @@ import './home.sass';
 import HeroBanner from "../hero-banner/HeroBanner.js";
 import OurProduct from "../home/OurProduct.js";
 
-
-function Home() {
+export default function Home() {
     
     // const array = {
     //     titles: [
@@ -27,7 +26,5 @@ function Home() {
         </div>
     )
 }
-
-export default Home;
 
 
