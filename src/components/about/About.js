@@ -1,9 +1,8 @@
 import React from "react";
 import OurStory from './OurStory.js';
 import "./about.sass";
-import Banner from '../banner/Banner'
 
-export default function About(props) {
+export default function About() {
     
     return (
         <div>
