@@ -21,12 +21,11 @@ function Home() {
             <Navigation />
             <HeroBanner/>
             <OurProduct />
-            <Contact/>
             <OurStory/>
             {
                 array.titles.map((element,index) => {
                     return(
-                        <Banner key={index} title={element}/>
+                        <Banner key={index} isma={element}/>
                     )
                 })
             }
