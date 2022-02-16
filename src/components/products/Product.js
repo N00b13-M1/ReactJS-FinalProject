@@ -10,7 +10,7 @@ export default function Product(props) {
                 <h2 className="text-white fs-1">COUP DE COEUR</h2>
             </div>
             <div>
-                <ul>
+                <ul className="">
                     {
                         itemList.map((element,index) =>{
                             return(
