@@ -3,7 +3,7 @@ import HeroBanner from "../hero-banner/HeroBanner.js";
 import OurStory from '../about/OurStory.js';
 import "./about.sass";
 
-function OurStory() {
+export default function OurStory() {
     
     return (
         <div>
@@ -12,7 +12,4 @@ function OurStory() {
         </div>
     )
 }
-
-export default OurStory;
-
 

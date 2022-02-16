@@ -1,5 +1,4 @@
 import React from 'react';
-import Panier from "./Panier.js"
 import './panier.sass';
 
 
