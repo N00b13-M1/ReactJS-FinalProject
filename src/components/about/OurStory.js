@@ -6,7 +6,7 @@ export default function OurStory() {
         <div className="container">
             <div className="row d-flex m-xl-5 m-4">
                 <div className="col-xl-5 col-lg-5 col-md-5 col-12 p-md-2 p-0">
-                    <img src="./img/story.webp" alt="story girl" className="img-fluid storygirl" />
+                    <img src="./img/xbanner-14.jpg.pagespeed.ic.lkAJ7orVFz.webp" alt="story girl" className="img-fluid storygirl" />
                 </div>
                 <div className="col-xl-7 col-lg-7 col-md-7 col-12 mt-xl-0 mt-lg-0 mt-md-0 mt-5 p-md-2 p-0">
                     <h2 className="">
