@@ -21,8 +21,6 @@ function Home() {
             <Navigation />
             <HeroBanner/>
             <OurProduct />
-            <Contact/>
-            <OurStory/>
             {
                 array.titles.map((element,index) => {
                     return(
