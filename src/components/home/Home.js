@@ -6,7 +6,6 @@ import Footer from "../footer/Footer.js";
 import OurProduct from "../home/OurProduct.js";
 import OurStory from '../about/OurStory.js';
 import Banner from '../banner/Banner.js'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 function Home() {
     
