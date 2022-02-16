@@ -13,7 +13,7 @@ export default function Product(props) {
                 <div className='row'>
                     {/* Categories */}
                     <div className='col-3'>
-                        <h4 cl>Category</h4>
+                        <h4 class>Category</h4>
                         <ul className=''>
                             <li>All</li>
                             <li>Women</li>
