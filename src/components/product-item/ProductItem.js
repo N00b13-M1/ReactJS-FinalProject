@@ -8,4 +8,3 @@ export default function ProductItem(id, thename, cover, price) {
         <p>{price}</p>
     </li>
 }
-
