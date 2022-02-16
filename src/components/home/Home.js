@@ -1,8 +1,8 @@
 import React from 'react';
 import './home.sass';
-import Header from "../header/Header.js";
+import Navigation from "../navigation/Navigation.js"
+import HeroBanner from "../hero-banner/HeroBanner.js";
 import Footer from "../footer/Footer.js";
-import Contact from '../contact/Contact.js';
 import OurProduct from "../home/OurProduct.js";
 import OurStory from '../about/OurStory.js';
 import Banner from '../banner/Banner.js'
@@ -18,7 +18,8 @@ function Home() {
     }  
     return (
         <div>
-            <Header />
+            <Navigation />
+            <HeroBanner/>
             <OurProduct />
             <Contact/>
             <OurStory/>
