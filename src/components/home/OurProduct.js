@@ -28,7 +28,13 @@ export default function OurProduct() {
                         <a className='filter'>Best-Seller</a>
                     </li>
                     <li>
+                        <a className='filter'>New</a>
+                    </li>
+                    <li>
                         <a className='filter'>Sale</a>
+                    </li>
+                    <li>
+                        <a className='filter'>Old</a>
                     </li>
                 </ul>
             </div>
