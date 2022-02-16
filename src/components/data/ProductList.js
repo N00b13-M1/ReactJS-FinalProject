@@ -89,5 +89,5 @@ export const itemList = [
         sale: true,
         price: "$75.00",
         cover: blackSneakers
-    },
+    }
 ]

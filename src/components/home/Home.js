@@ -16,6 +16,7 @@ export default function Home() {
         <div>
             <HeroBanner/>
             <OurProduct />
+            
             {/* {
                 array.titles.map((element,index) => {
                     return(

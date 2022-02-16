@@ -1,4 +1,5 @@
 import React from 'react';
+import { itemList } from '../data/ProductList';
 import ProductItem from '../product-item/ProductItem';
 import './ourproduct.sass';
 
@@ -31,9 +32,13 @@ export default function OurProduct() {
                     </li>
                 </ul>
             </div>
-            <ul>
-                <li>///// .MAP PRODUCT VIENT ICI ///// </li>
-            </ul>
+            <div>
+                    {itemList.map((element) =>
+                        <ProductItem 
+                            key = {element.id}
+                        />
+                    )}
+            </div>
             {/* LookBook Banner */}
         </div>
         <div className='container-fluid lookbook text-center'>
@@ -41,5 +46,5 @@ export default function OurProduct() {
                 <p><i className="fa-solid fa-play" /> Play Video</p>
         </div>
         </>
-    )
+    );
 }
