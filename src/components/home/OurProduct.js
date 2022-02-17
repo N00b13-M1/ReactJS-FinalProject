@@ -47,7 +47,7 @@ export default function OurProduct() {
         </div>
         <div className='container-fluid lookbook text-center'>
                 <h5><span>The Beauty</span><br /> LOOKBOOK</h5>
-                <p><i className="fa-solid fa-play" /> Play Video</p>
+                <p className='text-center'><i className="fa-solid fa-play" /> Play Video</p>
         </div>
         </>
     );
