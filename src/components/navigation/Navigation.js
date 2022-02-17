@@ -31,10 +31,12 @@ export default function Navigation() {
                         </ul>
                         <ul className="d-flex p-0 col-1">
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><i className="fa-regular fa-heart" /></a>
+                                <Link className="nav-link" to="/coeur"><i className="fa-regular fa-heart" /></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><i className="fa-regular fa-heart" /></a>
+                                <Link className="nav-link" to="/panier"><i className="fa-solid fa-heart" /></Link>
+                                {/* Cette merde d'icon ne veut pas afficher le panier chez moi, avec le coeur ça marche mais pas le panier?
+                                    <i className="fa-regular fa-bag-shopping" />  */}
                             </li>
                         </ul>
                     </div>
