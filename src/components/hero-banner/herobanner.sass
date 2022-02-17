@@ -11,9 +11,11 @@ p
 h1
     color: #fff
     font-size: 60px !important
+    font-weight: bold !important
 h2
     color: #fff
     font-size: 20px !important
+    font-weight: light !important
 .shop-now-button
     border: none
     border-radius: 20px !important
@@ -27,4 +29,34 @@ h2
 .shop-now:hover
     color: #fff !important
 
-// @media (min-width: 320px) and (max-width: 600px)
+// MEDIAQUERIES---------
+@media (min-width: 320px) and (max-width: 600px)
+    .carousel
+        display: none
+    .hero-mobile
+        height: 100vh
+        background-image: url("../../../public/img/master-slide-04.jpg.webp")
+        background-position: top
+    h1
+        font-size: 45px !important
+        font-weight: bold !important
+    h2
+        margin-top: 40px !important
+        font-weight: light !important
+        font-size: 10px !important
+@media (min-width: 601px) and (max-width: 1023px)
+    .carousel
+        display: none
+    .hero-mobile
+        height: 75vh
+        background-image: url("../../../public/img/master-slide-04.jpg.webp")
+        background-position: top
+    h1
+        font-size: 55px !important
+        font-weight: bold !important
+    h2
+        margin-top: 35px !important
+        font-weight: light !important
+@media (min-width: 1024px) and (max-width: 1100px)
+    .title
+        top: 18%

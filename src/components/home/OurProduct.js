@@ -9,15 +9,15 @@ export default function OurProduct() {
         <div className='container py-5'>
             {/* Coming Soon Images */}
             <div className='row justify-content-center pb-5'>
-                <div className='col-md-3 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
+                <div className='col-md-4 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
                     <button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
                     <img className='col-12' src="./img/coming-soon1.webp" />
                 </div>
-                <div className='col-md-3 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
+                <div className='col-md-4 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
                     <button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
                     <img className='col-12' src="./img/coming-soon1.webp" />
                 </div>
-                <div className='col-md-3 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
+                <div className='col-md-4 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
                     <button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
                     <img className='col-12' src="./img/coming-soon1.webp" />
                 </div>

@@ -8,6 +8,7 @@ export default function HeroBanner() {
     return (
         <div>
             {/* Carousel */}
+            <div className="hero-mobile"></div>
             <div className="title text-center">
                 <h2>Women Collection 2022</h2>
                 <h1>NEW ARRIVALS</h1>
