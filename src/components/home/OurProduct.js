@@ -2,8 +2,6 @@ import React from 'react';
 import { itemList } from '../data/ProductList';
 import ProductItem from '../product-item/ProductItem';
 import './ourproduct.sass';
-import comingSoon from "./img/coming-soon1.webp"
-
 
 export default function OurProduct() {  
     return (
@@ -13,15 +11,15 @@ export default function OurProduct() {
             <div className='row justify-content-center pb-5'>
                 <div className='col-md-3 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
                     <button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
-                    <img className='col-12' src={comingSoon} />
+                    <img className='col-12' src="./img/coming-soon1.webp" />
                 </div>
                 <div className='col-md-3 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
                     <button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
-                    <img className='col-12' src={comingSoon} />
+                    <img className='col-12' src="./img/coming-soon1.webp" />
                 </div>
                 <div className='col-md-3 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
                     <button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
-                    <img className='col-12' src={comingSoon} />
+                    <img className='col-12' src="./img/coming-soon1.webp" />
                 </div>
             </div>
             {/* Our Products Section */}
