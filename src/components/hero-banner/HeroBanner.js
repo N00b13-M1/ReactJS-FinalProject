@@ -1,5 +1,6 @@
 import React from "react";
 import "./herobanner.sass";
+import { Link } from "react-router-dom";
 
 
 export default function HeroBanner() {
@@ -10,7 +11,7 @@ export default function HeroBanner() {
             <div className="title text-center">
                 <h2>Women Collection 2022</h2>
                 <h1>NEW ARRIVALS</h1>
-                <button className="shop-now mt-3">SHOP NOW</button>
+                <button className="shop-now mt-3"><Link to="/product"> SHOP NOW</Link></button>
             </div>
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">

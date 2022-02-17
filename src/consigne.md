@@ -26,7 +26,7 @@
     - a un/plusieurs tags (best seller, new, old, sale) et une catégorie (women,men,kids,accessoire)
     - si le produit est "new" ou "old", un span se rajoute en haut à gauche du produit avec le tag en question (voir image en annexe)
     - possibilité d'activé un "sold". Le prix (-20%) et l'affichage se change automatiquement. 
-    - à l'over, possibilité d'ajouter le produit dans mon panier (add to cart = 1 ) + possibilité de liker le produit afin qu'il rajoute automatiquement  sur la page "coup de coeur" 
+    - à l'hover, possibilité d'ajouter le produit dans mon panier (add to cart = 1 ) + possibilité de liker le produit afin qu'il rajoute automatiquement  sur la page "coup de coeur" 
     - au clique du produit, une page "products-details" avec le produit en question et ses détails s'affiche (plus de détails dans la partie suivante)
 
 - sur la page product-detail se trouve : 
@@ -47,7 +47,7 @@
 - sur la page "coup de coeur" se trouve : 
     - le même résultat que la page "panier" à deux différencse prêt. 
     - le prix final de tous les produits n'y est plus
-    - un btn "add" qui rajoute le produit en qeustion dans le panier et le supprime de la page coup de coeur
+    - un btn "add" qui rajoute le produit en question dans le panier et le supprime de la page coup de coeur
 
 - sur la page "home" se trouve : 
     - un carrousel avec un btn dessus qui ammène vers la page product
