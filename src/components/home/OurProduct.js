@@ -2,6 +2,7 @@ import React from 'react';
 import { itemList } from '../data/ProductList';
 import ProductItem from '../product-item/ProductItem';
 import './ourproduct.sass';
+import comingSoon from "./img/coming-soon1.webp"
 
 
 export default function OurProduct() {  
@@ -9,15 +10,18 @@ export default function OurProduct() {
         <>
         <div className='container py-5'>
             {/* Coming Soon Images */}
-            <div className="row col-12 justify-content-evenly mx-0">
-                <div className='coming-soon-image col-md-3 col-12'>
-                    <p className='coming-soon text-center py-2'>J'arrive pas</p>
+            <div className='row justify-content-center pb-5'>
+                <div className='col-md-3 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
+                    <button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
+                    <img className='col-12' src={comingSoon} />
                 </div>
-                <div className='coming-soon-image col-md-3 col-12'>
-                    <p className='coming-soon text-center py-2'>à centrer</p>
+                <div className='col-md-3 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
+                    <button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
+                    <img className='col-12' src={comingSoon} />
                 </div>
-                <div className='coming-soon-image col-md-3 col-12'>
-                    <p className='coming-soon text-center py-2'>ces merdes là</p>
+                <div className='col-md-3 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
+                    <button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
+                    <img className='col-12' src={comingSoon} />
                 </div>
             </div>
             {/* Our Products Section */}
