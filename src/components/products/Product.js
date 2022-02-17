@@ -17,33 +17,33 @@ export default function Product(props) {
     return (
         <div className='text-center'>
             <div className="backgroundbanner d-flex justify-content-center align-items-center">
-                <h2 className="text-white fs-1">COUP DE COEUR</h2>
+                <h2 className="text-white fs-1">PRODUCTS</h2>
             </div>
             <div className="container py-5">
-                <div className='row'>
+                <div className='row justify-content-center'>
                     {/* Categories */}
-                    <div className='col-3'>
-                        <h4>Category</h4>
-                        <ul className=''>
-                            <li onClick={() => {changepageCategory('')}}>All</li>
-                            <li onClick={() => {changepageCategory('women')}}>Women</li>
-                            <li onClick={() => {changepageCategory('kids')}}>Kids</li>
-                            <li onClick={() => {changepageCategory('men')}}>Men</li>
-                            <li onClick={() => {changepageCategory('accessories')}}>Accessories</li>
+                    <div className='col-md-3 col-12 text-start'>
+                        <ul className='text-start'>
+                            <h4>Category</h4>
+                            <li className='my-1' onClick={() => {changepageCategory('')}}>All</li>
+                            <li className='my-1' onClick={() => {changepageCategory('women')}}>Women</li>
+                            <li className='my-1' onClick={() => {changepageCategory('kids')}}>Kids</li>
+                            <li className='my-1' onClick={() => {changepageCategory('men')}}>Men</li>
+                            <li className='my-1' onClick={() => {changepageCategory('accessories')}}>Accessories</li>
+                            <h4>Filter</h4>
+                            <input type="text" placeholder='Search Product' />
                         </ul>
-                        <h4>Filter</h4>
-                        <input type="text" placeholder='Search Product' />
                     </div>
                     {/* Products */}
-                    <div className='col-9 row'>
-                        <ul className="col-12 row">
+                    <div className='col-md-9 col-12 row justify-content-center p-4 pt-0'>
+                        <ul className="row justify-content-center p-0">
                             {
                                 itemList.filter(chaqueElementDuTableau => chaqueElementDuTableau.category.toLowerCase().includes(pageCategory))
                                 .map((element,index) =>{
                                     return(
-                                        <li className='col-3 mb-3' key={index}>
+                                        <li className='col-md-3 col-12 mb-3 mx-md-3 p-0' key={index}>
                                             <img className="product-item-cover col-12" src={element.cover} alt=""/>
-                                            <p>{element.thename}</p>
+                                            <p className='mb-0 mt-2 text-dark'>{element.thename}</p>
                                             <p>{element.price}</p>
                                         </li>
                                     )
