@@ -11,8 +11,10 @@ export default function Product(props) {
     const changepageCategory = (newPageCategory) => {
         setPageCategory(newPageCategory)
         console.log(pageCategory);
-    }    
+    }   
 
+
+    
 
     return (
         <div className='text-center'>
@@ -47,7 +49,7 @@ export default function Product(props) {
                                                 element.sale === true &&
                                                 <li className='col-md-3 col-12 mb-3 mx-md-3 p-0' key={index}>
                                                     <p className='sale py-1 px-2 ms-2 mt-2'>Sale</p>
-                                                    <img className="product-item-cover col-12" src={element.cover} alt=""/>
+                                                    <img onClick={() => {props.addProductLikesProp(element)}} className="product-item-cover col-12" src={element.cover} alt=""/>
                                                     <p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
                                                     <p>{element.price}</p>
                                                 </li>
@@ -55,7 +57,7 @@ export default function Product(props) {
                                             {
                                                 element.sale === false &&
                                                 <li className='col-md-3 col-12 mb-3 mx-md-3 p-0' key={index}>
-                                                    <img className="product-item-cover col-12" src={element.cover} alt=""/>
+                                                    <img onClick={() => {props.addProductLikesProp(element)}} className="product-item-cover col-12" src={element.cover} alt=""/>
                                                     <p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
                                                     <p>{element.price}</p>
                                                 </li>
