@@ -17,21 +17,96 @@ p
     text-align: left !important
     color: #000 !important
     font-size: 14px !important
+
+.product-item
+    position: relative
+
 .sale
     position: absolute
+    top: 0px
+    left: 0px
     z-index: 1
     color: #fff !important
     background-color: #E75541
     border-radius: 12px
     font-size: 10px !important
     font-weight: 400 !important
-.product-item-cover
-    position: relative
 .new
     position: absolute
+    top: 0px
+    right: 0px
     z-index: 1
     color: #fff !important
     background-color: #67A8A7
     border-radius: 12px
     font-size: 10px !important
     font-weight: 400 !important
+
+.old
+    position: absolute
+    bottom: 11.5%
+    right: 0px
+    z-index: 1
+    color: #fff !important
+    background-color: #0e4fbf
+    border-radius: 12px
+    font-size: 10px !important
+    font-weight: 400 !important
+
+.best-seller
+    position: absolute
+    z-index: 1
+    bottom: 11.5%
+    left: 0px
+    color: #fff !important
+    background-color: #ffe837
+    border-radius: 12px
+    font-size: 10px !important
+    font-weight: 400 !important
+
+/* Media Query for Mobile Devices */
+@media (max-width: 320px)
+    .old
+        bottom: 15%
+
+    .best-seller
+        bottom: 15%
+
+/* Media Query for Mobile Devices */
+@media (min-width: 321px) and (max-width: 375px)
+    .old
+        bottom: 13%
+
+    .best-seller
+        bottom: 13%
+         
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 376px) and (max-width: 425px) 
+
+         
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 426px) and (max-width: 768px)
+    .old
+        bottom: 28%
+
+    .best-seller
+        bottom: 28%
+
+         
+/* Media Query for Big Screens */
+@media (min-width: 769px) and (max-width: 1024px)
+    .old
+        bottom: 23%
+
+    .best-seller
+        bottom: 23%
+
+/* Media Query for Big Screens */
+@media (min-width: 1025px) and (max-width: 1440px)
+    .old
+        bottom: 17%
+
+    .best-seller
+        bottom: 17%
+        
+        

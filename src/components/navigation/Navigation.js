@@ -35,8 +35,6 @@ export default function Navigation() {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/panier"><i className="fa-solid fa-cart-shopping" /></Link>
-                                {/* Cette merde d'icon ne veut pas afficher le panier chez moi, avec le coeur ça marche mais pas le panier?
-                                    <i className="fa-regular fa-bag-shopping" />  */}
                             </li>
                         </ul>
                     </div>
