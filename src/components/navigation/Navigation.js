@@ -31,7 +31,7 @@ export default function Navigation() {
                         </ul>
                         <ul className="d-flex col-xl-1 col-lg-1 col-md-12 col-12 p-0 justify-content-center mx-auto my-auto">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/coeur"><i className="fa-regular fa-heart" /></Link>
+                                <Link className="nav-link" to="/coeur"><i className="fa-solid fa-heart" /></Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/panier"><i className="fa-solid fa-cart-shopping" /></Link>

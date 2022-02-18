@@ -18,7 +18,9 @@ export const itemList = [
         new: false,
         old: true,
         price: "$115.00",
-        cover: backpackGrey
+        cover: backpackGrey,
+        src: "./img/item-01.jpg.webp",
+        quantity: 10
     },
     {
         id: 1,
@@ -29,7 +31,9 @@ export const itemList = [
         new: false,
         old: true,
         price: "$125.00",
-        cover: backpackBlack
+        cover: backpackBlack,
+        src: "./img/item-02.jpg.webp",
+        quantity: 10
     },
     {
         id: 2,
@@ -40,7 +44,9 @@ export const itemList = [
         new: false,
         old: true,
         price: "$80.00",
-        cover: denimJacket
+        cover: denimJacket,
+        src: "./img/item-03.jpg.webp",
+        quantity: 10
     },
     {
         id: 3,
@@ -51,7 +57,9 @@ export const itemList = [
         new: false,
         old: true,
         price: "$85.00",
-        cover: whiteSneakers
+        cover: whiteSneakers,
+        src: "./img/item-06.jpg.webp",
+        quantity: 10
     },
     {
         id: 4,
@@ -62,7 +70,9 @@ export const itemList = [
         new: true,
         old: false,
         price: "$50.00",
-        cover: denimShorts
+        cover: denimShorts,
+        src: "./img/item-07.jpg.webp",
+        quantity: 10
     },
     {
         id: 5,
@@ -73,7 +83,9 @@ export const itemList = [
         new: true,
         old: false,
         price: "$95.00",
-        cover: watch
+        cover: watch,
+        src: "./img/item-08.jpg.webp",
+        quantity: 10
     },
     {
         id: 6,
@@ -84,7 +96,9 @@ export const itemList = [
         new: true,
         old: false,
         price: "$65.00",
-        cover: denimTrousers
+        cover: denimTrousers,
+        src: "./img/item-12.jpg.webp",
+        quantity: 10
     },
     {
         id: 7,
@@ -95,7 +109,9 @@ export const itemList = [
         new: true,
         old: false,
         price: "$45.00",
-        cover: tshirt
+        cover: tshirt,
+        src: "./img/item-14.jpg.webp",
+        quantity: 10
     },
     {
         id: 8,
@@ -106,6 +122,8 @@ export const itemList = [
         new: true,
         old: false,
         price: "$75.00",
-        cover: blackSneakers
+        cover: blackSneakers,
+        src: "./img/item-17.jpg.webp",
+        quantity: 10
     }
 ]

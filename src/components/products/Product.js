@@ -11,8 +11,10 @@ export default function Product(props) {
     const changepageCategory = (newPageCategory) => {
         setPageCategory(newPageCategory)
         console.log(pageCategory);
-    }    
+    }   
 
+
+    
 
     return (
         <div className='text-center'>
@@ -61,7 +63,7 @@ export default function Product(props) {
                                                     element.old === true &&
                                                     <p className='old py-1 py-1 px-2 m-2'>Old</p>
                                                 }
-                                                <img className="img-fluid" src={element.cover} alt="" />
+                                                <img onClick={() => {props.addProductLikesProp(element)}} className="img-fluid" src={element.cover} alt="" />
                                                 <p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
                                                 <p>{element.price}</p>
                                             </li>
