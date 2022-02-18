@@ -60,8 +60,6 @@ export default function Product(props) {
                                                     <p>{element.price}</p>
                                                 </li>
                                             }
-                                            
-
                                             {/* <li className='col-md-3 col-12 mb-3 mx-md-3 p-0' key={index}>
                                                 <img className="product-item-cover col-12" src={element.cover} alt=""/>
                                                 <p className='mb-0 mt-2 text-dark'>{element.thename}</p>
