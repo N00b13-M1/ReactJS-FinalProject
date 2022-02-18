@@ -77,7 +77,7 @@ export const itemList = [
     },
     {
         id: 6,
-        name: "Denim Trousers",
+        thename: "Denim Trousers",
         category: "Women",
         bestseller: true,
         sale: false,
@@ -88,7 +88,7 @@ export const itemList = [
     },
     {
         id: 7,
-        name: "T-shirt",
+        thename: "T-shirt",
         category: "Kids",
         bestseller: false,
         sale: true,
