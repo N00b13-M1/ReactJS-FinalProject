@@ -12,8 +12,8 @@ export default function Coeur(props) {
             <div className='container'>
                 <div className='row justify-content-center p-5'>
                     {/* Title Row */}
-                    <div className='row title-row'>
-                        <div className='col-3'>
+                    <div className='row title-row p-0'>
+                        <div className='col-2'>
                             <h6>PRODUCT</h6>
                         </div>
                         <div className='col-2'>
@@ -22,10 +22,10 @@ export default function Coeur(props) {
                         <div className='col-2'>
                             <h6>QUANTITY</h6>
                         </div>
-                        <div className='col-2'>
+                        <div className='col-3'>
                             <h6>TOTAL</h6>
                         </div>
-                        <div className='col-2'>
+                        <div className='col-3'>
                             <h6>ADD</h6>
                         </div>
                     </div>
@@ -34,22 +34,22 @@ export default function Coeur(props) {
                         {
                             props.tableauLikesProp.map(element => (
                                 <div className='row product-row'>
-                                    <div className='row col-3'>
+                                    <div className='row col-2 p-3'>
                                         <img className='col-12' src={element.src}/>
                                     </div>
-                                    <div className='col-2'>
+                                    <div className='row col-2 p-3 align-items-center justify-content-center'>
                                         {element.price}
                                     </div>
-                                    <div className='col-2 row'>
+                                    <div className='row col-2 row p-3 align-items-center justify-content-center'>
                                         <button className='col-4 quantity-button p-1 px-3'>-</button>
-                                        <p className='col-4 quantity m-0'>X</p>
+                                        <p className='col-4 m-0'>X</p>
                                         <button className='col-4 quantity-button p-1 px-3'>+</button>
                                     </div>
-                                    <div className='col-2'>
-                                        <p>X</p>
+                                    <div className='row col-3 p-3 align-items-center justify-content-center'>
+                                        <p className='text-center'>X</p>
                                     </div>
-                                    <div className='col-2'>
-                                        <button className='add-button px-3 py-1'>ADD</button>
+                                    <div className='row col-3 text-end p-3 align-items-center'>
+                                        <button className='add-button px-3 py-1 ms-5'>ADD</button>
                                     </div>
                                 </div>
                             ))
