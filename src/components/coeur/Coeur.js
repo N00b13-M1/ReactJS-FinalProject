@@ -6,7 +6,7 @@ export default function Coeur(props) {
     return (
         <div>
             <div className="backgroundbanner d-flex justify-content-center align-items-center">
-                <h2 className="text-white fs-1">FAVOURITE</h2>
+                <h2 className="text-white fs-1">FAVORITE</h2>
             </div>
             <div>
             <div className='container'>

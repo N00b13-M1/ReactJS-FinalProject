@@ -46,7 +46,7 @@ export default function Product(props) {
                                         <>
                                             {console.log(element)}
 
-                                            <li className='product-item col-md-3 col-12 mb-3 mx-md-3 p-0' key={index}>
+                                            <li key={index} className='product-item col-md-3 col-12 mb-3 mx-md-3 p-0'>
                                                 {
                                                     element.sale === true &&
                                                     <p className='sale py-1 px-2 m-2'>Sale</p>
