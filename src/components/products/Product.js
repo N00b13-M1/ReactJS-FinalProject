@@ -1,5 +1,5 @@
 import './product.sass';
-import ProductList, { itemList } from '../data/ProductList'
+import { itemList } from '../data/ProductList'
 import React, { useState } from 'react';
 
 
@@ -13,6 +13,17 @@ export default function Product(props) {
         console.log(pageCategory);
     }   
 
+
+    //Attempt for keywords search
+    // let changeToCategory = (e) => {
+    //     let keywords = [] 
+    //     itemList.forEach(element.thename => { 
+    //         keywords.push(element.thename)
+    //     })
+    //     if(e.key === "Enter"){
+    //         console.log(Object.values(keywords))
+    //     }
+    // }
 
     
 
@@ -33,8 +44,7 @@ export default function Product(props) {
                             <li className='my-1' onClick={() => {changepageCategory('Men')}}>Men</li>
                             <li className='my-1 mb-2' onClick={() => {changepageCategory('Accessories')}}>Accessories</li>
                             <h4>Filter</h4>
-                            <input type="text" placeholder='Search Product' />
-                            
+                            <input type="text" placeholder='Search Product' onKeyPress={(e) => changeToCategory(e)}/>
                         </ul>
                     </div>
                     {/* Products */}
@@ -45,7 +55,6 @@ export default function Product(props) {
                                     return(
                                         <>
                                             {console.log(element)}
-
                                             <li key={index} className='product-item col-md-3 col-12 mb-3 mx-md-3 p-0'>
                                                 {
                                                     element.sale === true &&
