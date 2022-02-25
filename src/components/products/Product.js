@@ -1,6 +1,7 @@
 import './product.sass';
 import { itemList } from '../data/ProductList'
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -8,24 +9,32 @@ export default function Product(props) {
 
     const [pageCategory, setPageCategory] = useState('');
 
-    const changepageCategory = (newPageCategory) => {
+    const changePageCategory = (newPageCategory) => {
         setPageCategory(newPageCategory)
         console.log(pageCategory);
+        
     }   
 
 
     //Attempt for keywords search
-    // let changeToCategory = (e) => {
-    //     let keywords = [] 
-    //     itemList.forEach(element.thename => { 
-    //         keywords.push(element.thename)
-    //     })
-    //     if(e.key === "Enter"){
-    //         console.log(Object.values(keywords))
-    //     }
-    // }
+    let changeToCategory = (e) => {
+        let keyword = e.target.value
+        itemList.forEach(element => {
+            if (keyword === element.thename){
+                itemList.filter.category
+            }
+            
+        });
+        // itemList.forEach(element.thename => { 
+        //     keywords.push(element.thename)
+    }
 
-    
+
+
+
+
+
+
 
     return (
         <div className='text-center'>
@@ -38,13 +47,13 @@ export default function Product(props) {
                     <div className='col-md-3 col-12 text-start'>
                         <ul className='text-start'>
                             <h4>Category</h4>
-                            <li className='my-1' onClick={() => {changepageCategory('')}}>All</li>
-                            <li className='my-1' onClick={() => {changepageCategory('Women')}}>Women</li>
-                            <li className='my-1' onClick={() => {changepageCategory('Kids')}}>Kids</li>
-                            <li className='my-1' onClick={() => {changepageCategory('Men')}}>Men</li>
-                            <li className='my-1 mb-2' onClick={() => {changepageCategory('Accessories')}}>Accessories</li>
+                            <li className='my-1' onClick={() => {changePageCategory('')}}>All</li>
+                            <li className='my-1' onClick={() => {changePageCategory('Women')}}>Women</li>
+                            <li className='my-1' onClick={() => {changePageCategory('Kids')}}>Kids</li>
+                            <li className='my-1' onClick={() => {changePageCategory('Men')}}>Men</li>
+                            <li className='my-1 mb-2' onClick={() => {changePageCategory('Accessories')}}>Accessories</li>
                             <h4>Filter</h4>
-                            <input type="text" placeholder='Search Product' onKeyPress={(e) => changeToCategory(e)}/>
+                            <input type="text" placeholder='Search Product' onInput={(e) => changeToCategory(e)}/>
                         </ul>
                     </div>
                     {/* Products */}
