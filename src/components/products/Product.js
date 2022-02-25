@@ -13,7 +13,6 @@ export default function Product(props) {
 		console.log(pageCategory);
 	}
 
-
 	//Attempt for keywords search
 	// let changeToCategory = (e) => {
 	//     let keywords = [] 
@@ -24,8 +23,6 @@ export default function Product(props) {
 	//         console.log(Object.values(keywords))
 	//     }
 	// }
-
-
 
 	return (
 		<div className='text-center'>
@@ -72,7 +69,11 @@ export default function Product(props) {
 													element.old === true &&
 													<p className='old py-1 py-1 px-2 m-2'>Old</p>
 												}
-												<img onClick={() => { props.addProductLikesProp(element) }} className="img-fluid" src={element.cover} alt="" />
+												<div className="div-product">
+													<img onClick={() => { props.addProductLikesProp(element) }} className="img-fluid" src={element.cover} alt="" />
+													<button className='add-cart py-2'>Add to Cart</button>
+													<button className='add-favorite'><i className="fa-solid fa-heart" /></button>
+												</div>
 												<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
 												<p>{element.price}</p>
 											</li>
