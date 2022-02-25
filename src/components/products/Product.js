@@ -1,6 +1,7 @@
 import './product.sass';
 import { itemList } from '../data/ProductList'
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,15 +15,15 @@ export default function Product(props) {
 	}
 
 	//Attempt for keywords search
-	// let changeToCategory = (e) => {
-	//     let keywords = [] 
-	//     itemList.forEach(element.thename => { 
-	//         keywords.push(element.thename)
-	//     })
-	//     if(e.key === "Enter"){
-	//         console.log(Object.values(keywords))
-	//     }
-	// }
+	let changeToCategory = (e) => {
+			// let keywords = []
+			// itemList.forEach(element.thename => {
+			// 	keywords.push(element.thename)
+			// })
+			// if (e.key === "Enter") {
+			// 	console.log(Object.values(keywords))
+			// }
+	}
 
 	return (
 		<div className='text-center'>
