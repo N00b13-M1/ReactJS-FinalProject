@@ -28,16 +28,17 @@ p
 .add-cart
     position: absolute
     left: 50%
-    margin-left: -55px //to center the button ( width divided by 2)
+    margin-left: -60px //to center the button (width divided by 2)
     bottom: 70px
     opacity: 0
     background-color: #000
     color: #fff
     border: none
     border-radius: 20px
-    width: 110px
+    width: 120px
     font-size: 14px
     transition: 0.4s
+    z-index: 2
 .add-favorite
     position: absolute
     left: -5px
@@ -45,6 +46,7 @@ p
     background-color: #ffffff00
     border: none
     transition: 0.4s
+    z-index: 2
 
 .div-product:hover
     .add-cart
@@ -54,9 +56,11 @@ p
         left: 0px
         opacity: 100%
 .add-cart:hover
-    transform: scale(1.1)
+    transform: scale(1.075)
+    background-color: #E75541
 .fa-heart:hover
     transform: scale(1.15)
+    color: #E75541
 
 .sale
     position: absolute
@@ -81,7 +85,7 @@ p
 
 .old
     position: absolute
-    bottom: 11.5%
+    bottom: 65px !important
     right: 0px
     z-index: 1
     color: #fff !important
@@ -93,7 +97,7 @@ p
 .best-seller
     position: absolute
     z-index: 1
-    bottom: 11.5%
+    bottom: 65px !important
     left: 0px
     color: #fff !important
     background-color: #ffe837
