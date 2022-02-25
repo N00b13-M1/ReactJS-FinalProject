@@ -63,51 +63,44 @@ export default function OurProduct() {
 							return (
 
 								<>
-
 									{
 										element.bestseller === true &&
-
-
-										<div className='col-3' key={index}>
+										<div className='col-md-3 col-12' key={index}>
 											<p className='bestseller py-1 px-2 ms-2 mt-2'>Best Seller</p>
 											<img className="product-item-cover img-fluid" src={element.cover} alt="" />
 											<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
 											<p>{element.price}</p>
 										</div>
-
-
 									}
 									{/* {
-                                    element.sale === true &&
-                                    <div className='col-3' key={index}>
-                                        <p className='sale py-1 px-2 ms-2 mt-2'>Sale</p>
-                                        <img className="product-item-cover img-fluid" src={element.cover} alt="" />
-                                        <p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
-                                        <p>{element.price}</p>
-                                    </div>
-                                }
-                                {
-                                    element.old === true &&
-                                    <div className='col-3' key={index}>
-                                        <p className='old py-1 px-2 ms-2 mt-2'>Old</p>
-                                        <img className="product-item-cover img-fluid" src={element.cover} alt="" />
-                                        <p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
-                                        <p>{element.price}</p>
-                                    </div>
-                                }
-                                {
-                                    element.new === true &&
-                                    <div className='col-3' key={index}>
-                                        <p className='new py-1 px-2 ms-2 mt-2'>New</p>
-                                        <img className="product-item-cover img-fluid" src={element.cover} alt="" />
-                                        <p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
-                                        <p>{element.price}</p>
-                                    </div>
-                                } */}
-
+												element.sale === true &&
+												<div className='col-3' key={index}>
+														<p className='sale py-1 px-2 ms-2 mt-2'>Sale</p>
+														<img className="product-item-cover img-fluid" src={element.cover} alt="" />
+														<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
+														<p>{element.price}</p>
+												</div>
+											}
+											{
+													element.old === true &&
+													<div className='col-3' key={index}>
+															<p className='old py-1 px-2 ms-2 mt-2'>Old</p>
+															<img className="product-item-cover img-fluid" src={element.cover} alt="" />
+															<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
+															<p>{element.price}</p>
+													</div>
+											}
+											{
+													element.new === true &&
+													<div className='col-3' key={index}>
+															<p className='new py-1 px-2 ms-2 mt-2'>New</p>
+															<img className="product-item-cover img-fluid" src={element.cover} alt="" />
+															<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
+															<p>{element.price}</p>
+													</div>
+											} */}
 								</>
 							)
-
 						})
 					}
 				</div>
