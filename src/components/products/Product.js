@@ -9,23 +9,31 @@ export default function Product(props) {
 
 	const [pageCategory, setPageCategory] = useState('');
 
-	const changepageCategory = (newPageCategory) => {
+
+	const changePageCategory = (newPageCategory) => {
 		setPageCategory(newPageCategory)
 		console.log(pageCategory);
 	}
 
+		const search = (e) =>{
+		// let searchValue = e.target.value
+		// if (searchValue !== '')
+		// itemList.filter((element)=>{
+		// 	return element.includes(e).map((element))
+			
+	
+		// })
 
-	//Attempt for keywords search
-	let changeToCategory = (e) => {
-			// let keywords = []
-			// itemList.forEach(element.thename => {
-			// 	keywords.push(element.thename)
-			// })
-			// if (e.key === "Enter") {
-			// 	console.log(Object.values(keywords))
-			// }
+		// if(itemList.names contains input.value){
+		// 	afficher toutitemlist.names
+		// } elseif (itemlost.name !contain input valie){
+		// 	affiche rien
+		// }
+		// else if input.value = ""{
+		// 	acchihe tout
+		// }
 	}
-
+				
 
 
 	return (
@@ -39,24 +47,31 @@ export default function Product(props) {
 					<div className='col-md-3 col-12 text-start'>
 						<ul className='text-start'>
 							<h4>Category</h4>
-							<li className='my-1' onClick={() => { changepageCategory('') }}>All</li>
-							<li className='my-1' onClick={() => { changepageCategory('Women') }}>Women</li>
-							<li className='my-1' onClick={() => { changepageCategory('Kids') }}>Kids</li>
-							<li className='my-1' onClick={() => { changepageCategory('Men') }}>Men</li>
-							<li className='my-1 mb-2' onClick={() => { changepageCategory('Accessories') }}>Accessories</li>
+							<li className='my-1' onClick={() => { changePageCategory('') }}>All</li>
+							<li className='my-1' onClick={() => { changePageCategory('Women') }}>Women</li>
+							<li className='my-1' onClick={() => { changePageCategory('Kids') }}>Kids</li>
+							<li className='my-1' onClick={() => { changePageCategory('Men') }}>Men</li>
+							<li className='my-1 mb-2' onClick={() => { changePageCategory('Accessories') }}>Accessories</li>
 							<h4>Filter</h4>
-							<input type="text" placeholder='Search Product' onKeyPress={(e) => changeToCategory(e)} />
+							<input type="text" placeholder='Search Product...' onChange={search} className='d-block text-truncate'/>
+							{/* <input
+                                        type="search"
+                                        onChange={filter}
+                                        placeholder="Search products..."
+                                        name="productResearch"
+                                        className=' border-0 d-block text-truncate'
+                            /> */}
 						</ul>
 					</div>
 					{/* Products */}
 					<div className='col-md-9 col-12 row justify-content-center p-4 pt-0'>
 						<ul className="row p-0">
 							{
-								itemList.filter(chaqueElementDuTableau => chaqueElementDuTableau.category.match(pageCategory)).map((element, index) => {
+								itemList.filter(element => element.category.match(pageCategory)).map((element, key) => {
 									return (
 										<>
 											{console.log(element)}
-											<li key={index} className='product-item col-md-3 col-12 mb-3 mx-md-3 p-0'>
+											<li className='product-item col-md-3 col-12 mb-3 mx-md-3 p-0' key={key}>
 												{
 													element.sale === true &&
 													<p className='sale py-1 px-2 m-2'>Sale</p>
