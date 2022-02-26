@@ -16,7 +16,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function App() {  
   // const [variable, setVariable] = useState(12);
-  // setVariable(prev => prev + 2)  //=> = accolades return//
+  // setVariable(prev => prev + 2)  // => = accolades return//
 
   // Tableau pour les products likés
   const [tableauLikes, setTableauLikes] = useState([]);
