@@ -71,9 +71,9 @@ export default function Product(props) {
 													<p className='old py-1 py-1 px-2 m-2'>Old</p>
 												}
 												<div className="div-product">
-													<img onClick={() => { props.addProductLikesProp(element) }} className="img-fluid" src={element.cover} alt="" />
+													<img className="img-fluid" src={element.cover} alt="" />
 													<button className='add-cart py-2'>ADD TO CART</button>
-													<button className='add-favorite'><i className="fa-solid fa-heart" /></button>
+													<button onClick={() => { props.addProductLikesProp(element) }} className='add-favorite'><i className="fa-solid fa-heart" /></button>
 												</div>
 												<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
 												<p>{element.price}</p>
