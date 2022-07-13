@@ -2,7 +2,7 @@ import React from 'react';
 import './panier.sass';
 
 
-export default function Panier() {  
+export default function Panier(props) {  
     return (
         <div>
             <div className="backgroundbanner d-flex justify-content-center align-items-center">
@@ -23,14 +23,12 @@ export default function Panier() {
                             <td>prix</td>
                             <td><button className='quantity-button p-1 px-3'>-</button><input className='quantity-input' type="number" /><button className='quantity-button p-1 px-3'>+</button></td>
                             <td>prix</td>
-                            <td><button className='add-button px-3 py-1'>ADD</button></td>
                         </tr>
                         <tr>
                             <td>mon produit</td>
                             <td>prix</td>
                             <td><button className='quantity-button p-1 px-3'>-</button><input className='quantity-input' type="number" /><button className='quantity-button p-1 px-3'>+</button></td>
                             <td>prix</td>
-                            <td><button className='add-button px-3 py-1'>ADD</button></td>
                         </tr>
     
                     </table>

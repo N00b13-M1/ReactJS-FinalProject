@@ -16,7 +16,10 @@ export default function Product(props) {
 	}
 
 	//Attempt for keywords search
-	let changeToCategory = (e) => {
+	let search = (e) => {
+		if(e.target.value !== ''){
+		sdfsfsddfds
+		}
 		// let keywords = []
 		// itemList.forEach(element.thename => {
 		// 	keywords.push(element.thename)
@@ -25,6 +28,10 @@ export default function Product(props) {
 		// 	console.log(Object.values(keywords))
 		// }
 	}
+
+	
+
+
 
 	return (
 		<div className='text-center'>

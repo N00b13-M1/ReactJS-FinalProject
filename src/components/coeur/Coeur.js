@@ -3,6 +3,9 @@ import './coeur.sass';
 
 
 export default function Coeur(props) {
+	
+	
+	
 	return (
 		<div>
 			<div className="backgroundbanner d-flex justify-content-center align-items-center">
@@ -35,18 +38,18 @@ export default function Coeur(props) {
 								props.tableauLikesProp.map(element => (
 									<div className='row product-row'>
 										<div className='row col-2 p-3'>
-											<img className='col-12' src={element.src} />
+											<img className='col-12' src={element.src} alt="icon"/>
 										</div>
 										<div className='row col-2 p-3 align-items-center justify-content-center'>
 											{element.price}
 										</div>
 										<div className='row col-2 row p-3 align-items-center justify-content-center'>
 											<button className='col-4 quantity-button p-1 px-3'>-</button>
-											<p className='col-4 m-0'>X</p>
+											<p className='col-4 m-0'>1</p>
 											<button className='col-4 quantity-button p-1 px-3'>+</button>
 										</div>
 										<div className='row col-3 p-3 align-items-center justify-content-center'>
-											<p className='text-center'>X</p>
+											<p className='text-center'>{element.price}</p>
 										</div>
 										<div className='row col-3 text-end p-3 align-items-center'>
 											<button className='add-button px-3 py-1 ms-5'>ADD TO BASKET</button>
