@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function Product({productList,addProductLikesProp,handleAddtoCart}) {
+export default function Product() {
 
 	const [allItemList,setAllItemList]=useState([])
 	const [pageCategory, setPageCategory] = useState('');
