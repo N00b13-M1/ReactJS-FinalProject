@@ -30,7 +30,6 @@ export default function Panier(props) {
                             <td><button className='quantity-button p-1 px-3'>-</button><input className='quantity-input' type="number" /><button className='quantity-button p-1 px-3'>+</button></td>
                             <td>prix</td>
                         </tr>
-    
                     </table>
                 </div>
             </div>

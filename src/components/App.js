@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './app.sass';
 import Navigation from "./navigation/Navigation.js"
 import Home from "./home/Home.js";
@@ -7,7 +7,7 @@ import About from "./about/About.js";
 import Contact from "./contact/Contact.js";
 import Coeur from "./coeur/Coeur.js";
 import Panier from "./panier/Panier.js";
-import Footer from "./footer/Footer.js";
+import Footer from "./footer/Footer.js"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // let list = [a , b, c]
@@ -24,16 +24,36 @@ export default function App() {
     setTableauLikes(prev => [ ...prev, product ])
     console.log(tableauLikes);
   }
+  // const [molengeek, setMolengeek] = useState(0);
+
+  // // TEST
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   document.title = `You clicked ${molengeek} times`;
+  // });
+
+
 
   return (
+
       <div className='App'>
+        {/* <div>
+          <p>You clicked {molengeek} times</p>
+          <button onClick={() => setMolengeek(molengeek + 1)}>
+            Click me
+          </button>
+        </div> */}
         <BrowserRouter>
           <Navigation />
           <Routes>
             <Route path={"/"} element={<Home/>} />
-            <Route path={"/product"} element={<Product addProductLikesProp={addProductLikes} />} />
+
+            <Route path={"/product"} element={<Product 
+            addProductLikesProp={addProductLikes}/>} />
+
             <Route path={"/about"} element={<About/>} />
             <Route path={"/contact"} element={<Contact/>} />
+            
             <Route path={"/coeur"} element={<Coeur tableauLikesProp={tableauLikes}/>} />
             <Route path={"/panier"} element={<Panier/>} />
           </Routes>

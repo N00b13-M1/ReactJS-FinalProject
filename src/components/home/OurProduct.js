@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { itemList } from '../data/ProductList'
 import './ourproduct.sass';
 
 export default function OurProduct() {
+	const [ourProductList,setOurProductList]=useState([])
+	const [changeSaleCategory, setChangeSaleCategory] = useState('Best-Seller');
 
+	useEffect(()=>{
+		setOurProductList(itemList)
+	},[itemList])
+
+	
 	// const [pageSaleCategory, setPageSaleCategory] = useState('');
 
 	// const changepageCategory = (newPageCategory) => {
@@ -11,14 +18,28 @@ export default function OurProduct() {
 	//     console.log(pageCategory);
 	// }
 
-	let changeSaleCategory = (input) => {
-		// console.log(document.getElementsByClassName('element4')[0])
-		// console.log(itemList[0].bestseller)
-		itemList.map((element, index) => {
-			if (input.replaceAll('-', '').toLowerCase() === element[index]) {
-				console.log("Hello")
+	// let changeSaleCategory = (input) => {
+	// 	// console.log(document.getElementsByClassName('element4')[0])
+	// 	// console.log(itemList[0].bestseller)
+	// 	itemList.map((element, index) => {
+	// 		if (input.replaceAll('-', '').toLowerCase() === element[index]) {
+	// 			console.log("Hello")
+	// 		}
+	// 	})
+	// }
+
+	const filteredProductList=()=>{
+	
+		let filteredList=ourProductList.filter((val)=>{
+			if(val[changeSaleCategory.replaceAll('-', '').toLowerCase()]){
+				// console.log('1')
+				return true
 			}
+			else 
+			console.log('2')	
+			return false
 		})
+		return filteredList
 	}
 
 	return (
@@ -44,61 +65,61 @@ export default function OurProduct() {
 					<h3 className='text-center'>OUR PRODUCTS</h3>
 					<ul className='d-flex justify-content-center p-0'>
 						<li>
-							<a className='filter' onClick={() => changeSaleCategory('Best-Seller')}>Best-Seller</a>
+							<a className='filter' onClick={() => setChangeSaleCategory('Best-Seller')}>Best-Seller</a>
 						</li>
 						<li>
-							<a className='filter' onClick={() => changeSaleCategory('New')}>New</a>
+							<a className='filter' onClick={() => setChangeSaleCategory('New')}>New</a>
 						</li>
 						<li>
-							<a className='filter' onClick={() => changeSaleCategory('Sale')}>Sale</a>
+							<a className='filter' onClick={() => setChangeSaleCategory('Sale')}>Sale</a>
 						</li>
 						<li>
-							<a className='filter' onClick={() => changeSaleCategory('Old')}>Old</a>
+							<a className='filter' onClick={() => setChangeSaleCategory('Old')}>Old</a>
 						</li>
 					</ul>
 				</div>
 				<div className="row element4 text-center">
 					{
-						itemList.map((element, index) => {
+						filteredProductList().map((element, index) => {
 							return (
 
 								<>
 									{
 										element.bestseller === true &&
 										<div className='col-md-3 col-12' key={index}>
-											<p className='bestseller py-1 px-2 ms-2 mt-2'>Best Seller</p>
+											{/* <p className='bestseller py-1 px-2 ms-2 mt-2'>Best Seller</p> */}
 											<img className="product-item-cover img-fluid" src={element.cover} alt="" />
 											<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
 											<p>{element.price}</p>
 										</div>
 									}
 									{/* {
-												element.sale === true &&
-												<div className='col-3' key={index}>
-														<p className='sale py-1 px-2 ms-2 mt-2'>Sale</p>
-														<img className="product-item-cover img-fluid" src={element.cover} alt="" />
-														<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
-														<p>{element.price}</p>
-												</div>
-											}
-											{
-													element.old === true &&
-													<div className='col-3' key={index}>
-															<p className='old py-1 px-2 ms-2 mt-2'>Old</p>
-															<img className="product-item-cover img-fluid" src={element.cover} alt="" />
-															<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
-															<p>{element.price}</p>
-													</div>
-											}
-											{
-													element.new === true &&
-													<div className='col-3' key={index}>
-															<p className='new py-1 px-2 ms-2 mt-2'>New</p>
-															<img className="product-item-cover img-fluid" src={element.cover} alt="" />
-															<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
-															<p>{element.price}</p>
-													</div>
-											} */}
+										element.sale === true &&
+										<div className='col-md-3 col-12' key={index}>
+												<p className='sale py-1 px-2 ms-2 mt-2'>Sale</p>
+												<img className="product-item-cover img-fluid" src={element.cover} alt="" />
+												<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
+												<p>{element.price}</p>
+										</div>
+									}
+									{
+										element.old === true &&
+										<div className='col-md-3 col-12' key={index}>
+												<p className='old py-1 px-2 ms-2 mt-2'>Old</p>
+												<img className="product-item-cover img-fluid" src={element.cover} alt="" />
+												<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
+												<p>{element.price}</p>
+										</div>
+									}
+									{
+										element.new === true &&
+										<div className='col-md-3 col-12' key={index}>
+												<p className='new py-1 px-2 ms-2 mt-2'>New</p>
+												<img className="product-item-cover img-fluid" src={element.cover} alt="" />
+												<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
+												<p>{element.price}</p>
+										</div>
+									} */}
 								</>
 							)
 						})

@@ -18,7 +18,6 @@ export default function Product(props) {
 	//Attempt for keywords search
 	let search = (e) => {
 		if(e.target.value !== ''){
-		sdfsfsddfds
 		}
 		// let keywords = []
 		// itemList.forEach(element.thename => {
