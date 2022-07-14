@@ -26,7 +26,27 @@ export default function App() {
     setAllProductList(itemList)
   },[itemList])
 
+  const addProductLikes = (selectedItems) => {
 
+    const updatedProducts= allProductList.map((product) => {
+      if (product.id === selectedItems.id) {
+        if (product?.isLike) {
+          return {
+            ...product,
+            isLike: !product.isLike,
+          };
+        } else {
+          return {
+            ...product,
+            isLike: true,
+            quantitySelected: 1,
+            totalAmount: Number(product.price.replace(/[^0-9.-]+/g, "")),
+          };
+        }
+      } else return product;
+    });
+    setAllProductList(updatedProducts)
+};
 
 
   return (
@@ -37,7 +57,7 @@ export default function App() {
             <Route path={"/"} element={<Home/>} />
             <Route path={"/product"}
             element={<Product 
-
+            addProductLikesProp={addProductLikes}
             productList={allProductList}
 
             
@@ -47,7 +67,7 @@ export default function App() {
             <Route path={"/contact"} element={<Contact/>} />
             <Route path={"/coeur"} 
              element={<Coeur
-
+            tableauLikesProp={allProductList.filter((val) => val.isLike)} 
              />} />
             <Route path={"/panier"}
             element={<Panier 

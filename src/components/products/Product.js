@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function Product() {
+export default function Product({productList,addProductLikesProp,handleAddtoCart}) {
 
 	const [allItemList,setAllItemList]=useState([])
 	const [pageCategory, setPageCategory] = useState('');
@@ -96,8 +96,8 @@ export default function Product() {
 												}
 												<div className="div-product">
 													<img className="img-fluid" src={element.cover} alt="" />
-													<button className='add-cart py-2' >ADD TO CART</button>
-													<button className={`add-favorite ${element.isLike && 'add-fix-favorite'}`} ><i className="fa-solid  fa-heart fa-red" /></button>
+													<button className='add-cart py-2' onClick={()=>handleAddtoCart(element)}>ADD TO CART</button>
+													<button onClick={() => {addProductLikesProp(element)}} className={`add-favorite ${element?.isLike && 'add-fix-favorite'}`} ><i className="fa-solid  fa-heart fa-red" /></button>
 												</div>
 												<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
 												<p>{element.price}</p>
