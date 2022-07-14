@@ -3,11 +3,11 @@ import { itemList } from '../data/ProductList'
 import './ourproduct.sass';
 
 export default function OurProduct() {
-	const [ourProductList,setOurProductList]=useState([])
-	const [changeSaleCategory, setChangeSaleCategory] = useState('Best-Seller');
+	const [allItemList,setAllItemList]=useState([])
+	const [pageCategory, setPageCategory] = useState('Best-Seller');
 
 	useEffect(()=>{
-		setOurProductList(itemList)
+		setAllItemList(itemList)
 	},[itemList])
 
 	
@@ -30,8 +30,8 @@ export default function OurProduct() {
 
 	const filteredProductList=()=>{
 	
-		let filteredList=ourProductList.filter((val)=>{
-			if(val[changeSaleCategory.replaceAll('-', '').toLowerCase()]){
+		let filteredList=allItemList.filter((val)=>{
+			if(val[pageCategory.replaceAll('-', '').toLowerCase()]){
 				// console.log('1')
 				return true
 			}
@@ -62,19 +62,18 @@ export default function OurProduct() {
 				</div>
 				{/* Our Products Section */}
 				<div>
-					<h3 className='text-center'>OUR PRODUCTS</h3>
 					<ul className='d-flex justify-content-center p-0'>
 						<li>
-							<a className='filter' onClick={() => setChangeSaleCategory('Best-Seller')}>Best-Seller</a>
+							<a className='filter' onClick={() => setPageCategory('Best-Seller')}>Best-Seller</a>
 						</li>
 						<li>
-							<a className='filter' onClick={() => setChangeSaleCategory('New')}>New</a>
+							<a className='filter' onClick={() => setPageCategory('New')}>New</a>
 						</li>
 						<li>
-							<a className='filter' onClick={() => setChangeSaleCategory('Sale')}>Sale</a>
+							<a className='filter' onClick={() => setPageCategory('Sale')}>Sale</a>
 						</li>
 						<li>
-							<a className='filter' onClick={() => setChangeSaleCategory('Old')}>Old</a>
+							<a className='filter' onClick={() => setPageCategory('Old')}>Old</a>
 						</li>
 					</ul>
 				</div>

@@ -1,24 +1,27 @@
 import './product.sass';
 import { itemList } from '../data/ProductList'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
 
-export default function Product(props) {
+export default function Product({productList,addProductLikesProp,handleAddtoCart}) {
 
+	const [allItemList,setAllItemList]=useState([])
 	const [pageCategory, setPageCategory] = useState('');
+	const [search,setSearch]=useState('')
 
+	useEffect(() => {
+	setAllItemList(itemList);
+  }, [itemList]);
 
 	const changePageCategory = (newPageCategory) => {
 		setPageCategory(newPageCategory)
-		console.log(pageCategory);
+		setSearch('')
 	}
 
 	//Attempt for keywords search
-	let search = (e) => {
-		if(e.target.value !== ''){
-		}
+	let changeToCategory = (e) => {
 		// let keywords = []
 		// itemList.forEach(element.thename => {
 		// 	keywords.push(element.thename)
@@ -28,9 +31,17 @@ export default function Product(props) {
 		// }
 	}
 
-	
-
-
+	const getUpdatedList = () => {
+    if (search) {
+      return allItemList.filter((element) => {
+        return (
+          element.category.match(pageCategory) &&
+          element.thename.toLowerCase().includes(search.toLowerCase().trim())
+        );
+      });
+    }
+    return allItemList.filter((element) => element.category.match(pageCategory));
+  };
 
 	return (
 		<div className='text-center'>
@@ -49,7 +60,7 @@ export default function Product(props) {
 							<li className='my-1' onClick={() => { changePageCategory('Men') }}>Men</li>
 							<li className='my-1 mb-2' onClick={() => { changePageCategory('Accessories') }}>Accessories</li>
 							<h4>Filter</h4>
-							<input type="text" placeholder='Search Product...' onChange={search} className='d-block text-truncate'/>
+							<input type="text" placeholder='Search Product...' value={search} onChange={(e)=>setSearch(e.target.value)} className='d-block text-truncate'/>
 							{/* <input
                                         type="search"
                                         onChange={filter}
@@ -63,10 +74,9 @@ export default function Product(props) {
 					<div className='col-md-9 col-12 row justify-content-center p-4 pt-0'>
 						<ul className="row p-0">
 							{
-								itemList.filter(element => element.category.match(pageCategory)).map((element, key) => {
+								getUpdatedList().map((element, key) => {
 									return (
 										<>
-											{console.log(element)}
 											<li className='product-item col-md-3 col-12 mb-3 mx-md-3 p-0' key={key}>
 												{
 													element.sale === true &&
@@ -86,8 +96,8 @@ export default function Product(props) {
 												}
 												<div className="div-product">
 													<img className="img-fluid" src={element.cover} alt="" />
-													<button className='add-cart py-2'>ADD TO CART</button>
-													<button onClick={() => { props.addProductLikesProp(element) }} className='add-favorite'><i className="fa-solid fa-heart" /></button>
+													<button className='add-cart py-2' >ADD TO CART</button>
+													<button className={`add-favorite ${element.isLike && 'add-fix-favorite'}`} ><i className="fa-solid  fa-heart fa-red" /></button>
 												</div>
 												<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
 												<p>{element.price}</p>
