@@ -36,7 +36,7 @@ export default function OurProduct() {
 				return true
 			}
 			else 
-			console.log('2')	
+			// console.log('2')	
 			return false
 		})
 		return filteredList
@@ -49,15 +49,15 @@ export default function OurProduct() {
 				<div className='row justify-content-center pb-5'>
 					<div className='col-md-4 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
 						<button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
-						<img className='col-12' src="./img/coming-soon1.webp" />
+						<img className='col-12' src="./img/coming-soon1.webp" alt="pic1"/>
 					</div>
 					<div className='col-md-4 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
 						<button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
-						<img className='col-12' src="./img/coming-soon1.webp" />
+						<img className='col-12' src="./img/coming-soon1.webp" alt="pic1" />
 					</div>
 					<div className='col-md-4 col-12 d-flex justify-content-center align-items-end mb-md-0 mb-3'>
 						<button className='coming-soon-button m-4 py-2 px-4'>COMING SOON</button>
-						<img className='col-12' src="./img/coming-soon1.webp" />
+						<img className='col-12' src="./img/coming-soon1.webp" alt="pic1" />
 					</div>
 				</div>
 				{/* Our Products Section */}
@@ -85,7 +85,7 @@ export default function OurProduct() {
 
 								<>
 									{
-										element.bestseller === true &&
+										// element.bestseller === true &&
 										<div className='col-md-3 col-12' key={index}>
 											{/* <p className='bestseller py-1 px-2 ms-2 mt-2'>Best Seller</p> */}
 											<img className="product-item-cover img-fluid" src={element.cover} alt="" />
