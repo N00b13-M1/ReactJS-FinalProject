@@ -12,8 +12,10 @@ export default function Product({productList,addProductLikesProp,handleAddtoCart
 	const [search,setSearch]=useState('')
 
 	useEffect(() => {
-	setAllItemList(itemList);
-  }, [itemList]);
+    if (productList?.length) {
+      setAllItemList(productList);
+    }
+  }, [productList]);
 
 	const changePageCategory = (newPageCategory) => {
 		setPageCategory(newPageCategory)
@@ -36,7 +38,7 @@ export default function Product({productList,addProductLikesProp,handleAddtoCart
       return allItemList.filter((element) => {
         return (
           element.category.match(pageCategory) &&
-          element.thename.toLowerCase().includes(search.toLowerCase().trim())
+          element.thename.toLowerCase()?.includes(search.toLowerCase().trim())
         );
       });
     }

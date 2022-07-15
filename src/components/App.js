@@ -26,11 +26,13 @@ export default function App() {
     setAllProductList(itemList)
   },[itemList])
 
+
+
   const addProductLikes = (selectedItems) => {
 
     const updatedProducts= allProductList.map((product) => {
       if (product.id === selectedItems.id) {
-        if (product?.isLike) {
+        if (product.isLike) {
           return {
             ...product,
             isLike: !product.isLike,
@@ -48,6 +50,79 @@ export default function App() {
     setAllProductList(updatedProducts)
 };
 
+const handleIncreaseOrDecreaseItem = (product, type,cart) => {
+  const currentItem=[...allProductList]
+    const updatedPrice = currentItem.map((val) => {
+      if (product.id === val.id) {
+        let currentPrice = Number(val.price.replace(/[^0-9.-]+/g, ""));
+        if (type === "add") {
+          return {
+            ...val,
+            quantitySelected: val.quantitySelected + 1,
+            totalAmount: currentPrice * (val.quantitySelected + 1),
+          };
+        }
+        if (type === "remove" && val.quantitySelected !== 0) {
+          return {
+            ...val,
+            quantitySelected: val.quantitySelected - 1,
+            totalAmount:
+              val.totalAmount - Number(val.price.replace(/[^0-9.-]+/g, "")),
+          };
+        }
+      } else {
+        return val;
+      }
+    });
+    setAllProductList(updatedPrice)
+};
+
+const handleRemoveItem = (item, cart) => {
+  const currentItem = [...allProductList];
+  const updatedProducts = currentItem.map((val) => {
+    if (val.id === item.id) {
+      return {
+        ...val,
+        isAddedtoCart: false,
+        isLike: false,
+        totalAmount: 0,
+        quantitySelected: 0,
+      };
+    } else return val;
+  });
+  setAllProductList(updatedProducts);
+};
+
+const handleAddtoCart=(itemvalue)=>{
+  const updatedCart=allProductList.map((val)=>{
+
+    if(itemvalue.id===val.id && val.isLike){
+      return{
+        ...val,
+        isAddedtoCart:true
+      }
+    }
+    else return val
+  })
+  setAllProductList(updatedCart)
+}
+
+const handleAddtoBasket=(product)=>{
+  const currentItem=[...allProductList]
+  const updatedProducts=currentItem.map((val)=>{
+    if(val.id===product.id){
+      return{
+        ...val,
+        isAddedtoCart:true,
+        quantitySelected: 1,
+        totalAmount: Number(val.price.replace(/[^0-9.-]+/g, "")),
+      }
+    }
+    else return val
+  })
+  setAllProductList(updatedProducts)
+}
+
 
   return (
       <div className='App'>
@@ -59,6 +134,7 @@ export default function App() {
             element={<Product 
             addProductLikesProp={addProductLikes}
             productList={allProductList}
+            handleAddtoCart={handleAddtoBasket}
 
             
             />}
@@ -68,11 +144,15 @@ export default function App() {
             <Route path={"/coeur"} 
              element={<Coeur
             tableauLikesProp={allProductList.filter((val) => val.isLike)} 
+            handleItem={handleIncreaseOrDecreaseItem}
+            handleRemoveItem={handleRemoveItem}
+            handleAddToBasket={handleAddtoCart}
              />} />
             <Route path={"/panier"}
-            element={<Panier 
-
-
+            element={<Panier
+            finalCart={allProductList.filter((val)=>val.isAddedtoCart)} 
+            handleItem={handleIncreaseOrDecreaseItem}
+            handleRemoveItem={handleRemoveItem}
 
             />}/>
           </Routes>
