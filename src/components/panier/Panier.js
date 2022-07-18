@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import PaymentModal from "../payment-modal/Payment-modal";
-import { useNavigate } from 'react-router-dom'
+import React from "react";
 import "./panier.sass";
 
-export default function Panier({ finalCart = [], handleItem, handleRemoveItem, setIsPaymentDone }) {
-    const navigate = useNavigate()
+export default function Panier({ finalCart = [], handleItem, handleRemoveItem }) {
+
 
     const totalAmountToPay = () => {
         const total = finalCart.reduce((acc, curr) => {
@@ -25,7 +23,7 @@ export default function Panier({ finalCart = [], handleItem, handleRemoveItem, s
                 <div className="row justify-content-center p-5">
                     <table>
                         <tr>
-                            <th>Picture</th>
+                            <th>PICTURE</th>
                             <th>PRODUCT</th>
                             <th>PRICE</th>
                             <th>QUANTITY</th>
@@ -34,7 +32,7 @@ export default function Panier({ finalCart = [], handleItem, handleRemoveItem, s
                         {finalCart?.map((val) => {
                             return (
                                 <tr key={val.id}>
-                                    <td><img src={val.src} width='150px' height='150px' style={{ padding: '6px' }} alt="product-picture" /></td>
+                                    <td><img src={val.src} width='150px' height='150px' style={{ padding: '6px' }} alt="product" /></td>
                                     <td>{val.thename}</td>
                                     <td>{val.price}</td>
                                     <td>

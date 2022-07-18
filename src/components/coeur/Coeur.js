@@ -35,7 +35,7 @@ export default function Coeur(props) {
 								props.tableauLikesProp.map(element => (
 									<div className='row product-row' key={element.id}>
 										<div className='row col-2 p-3'>
-											<img className='col-12' src={element?.src} />
+											<img className='col-12' src={element.src} />
 										</div>
 										<div className='row col-2 p-3 align-items-center justify-content-center'>
 											{element.price}

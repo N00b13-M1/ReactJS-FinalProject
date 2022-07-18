@@ -24,9 +24,9 @@ export default function App() {
 
   useEffect(()=>{
     setAllProductList(itemList)
-  },[itemList])
+  },[])
 
-
+  
 
   const addProductLikes = (selectedItems) => {
 
@@ -50,7 +50,7 @@ export default function App() {
     setAllProductList(updatedProducts)
 };
 
-const handleIncreaseOrDecreaseItem = (product, type,cart) => {
+const handleIncreaseOrDecreaseItem = (product, type) => {
   const currentItem=[...allProductList]
     const updatedPrice = currentItem.map((val) => {
       if (product.id === val.id) {
@@ -77,7 +77,7 @@ const handleIncreaseOrDecreaseItem = (product, type,cart) => {
     setAllProductList(updatedPrice)
 };
 
-const handleRemoveItem = (item, cart) => {
+const handleRemoveItem = (item) => {
   const currentItem = [...allProductList];
   const updatedProducts = currentItem.map((val) => {
     if (val.id === item.id) {
@@ -161,7 +161,5 @@ const handleAddtoBasket=(product)=>{
       </div>
   )
 }
-
-
 
 

@@ -1,7 +1,7 @@
 import './product.sass';
-import { itemList } from '../data/ProductList'
+// import { itemList } from '../data/ProductList'
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 
@@ -12,9 +12,9 @@ export default function Product({productList,addProductLikesProp,handleAddtoCart
 	const [search,setSearch]=useState('')
 
 	useEffect(() => {
-    if (productList?.length) {
+
       setAllItemList(productList);
-    }
+    
   }, [productList]);
 
 	const changePageCategory = (newPageCategory) => {
@@ -23,22 +23,22 @@ export default function Product({productList,addProductLikesProp,handleAddtoCart
 	}
 
 	//Attempt for keywords search
-	let changeToCategory = (e) => {
-		// let keywords = []
-		// itemList.forEach(element.thename => {
-		// 	keywords.push(element.thename)
-		// })
-		// if (e.key === "Enter") {
-		// 	console.log(Object.values(keywords))
-		// }
-	}
+	// let changeToCategory = (e) => {
+	// 	// let keywords = []
+	// 	// itemList.forEach(element.thename => {
+	// 	// 	keywords.push(element.thename)
+	// 	// })
+	// 	// if (e.key === "Enter") {
+	// 	// 	console.log(Object.values(keywords))
+	// 	// }
+	// }
 
 	const getUpdatedList = () => {
     if (search) {
       return allItemList.filter((element) => {
         return (
           element.category.match(pageCategory) &&
-          element.thename.toLowerCase()?.includes(search.toLowerCase().trim())
+          element.thename.toLowerCase().includes(search.toLowerCase().trim())
         );
       });
     }
@@ -99,7 +99,7 @@ export default function Product({productList,addProductLikesProp,handleAddtoCart
 												<div className="div-product">
 													<img className="img-fluid" src={element.cover} alt="" />
 													<button className='add-cart py-2' onClick={()=>handleAddtoCart(element)}>ADD TO CART</button>
-													<button onClick={() => {addProductLikesProp(element)}} className={`add-favorite ${element?.isLike && 'add-fix-favorite'}`} ><i className="fa-solid  fa-heart fa-red" /></button>
+													<button onClick={() => {addProductLikesProp(element)}} className={`add-favorite ${element.isLike && 'add-fix-favorite'}`} ><i className="fa-solid  fa-heart fa-red" /></button>
 												</div>
 												<p className='mb-0 mt-2 text-dark fw-bold'>{element.thename}</p>
 												<p>{element.price}</p>
